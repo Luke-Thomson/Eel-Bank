@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>
+        Eel Bank
+    </title>
+<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="/eel.js"></script>
+</head>
+<body>
+    <label for="change_total">absolute value of the transaction</label>
+    <input type="number" id="change_total"><br><br>
+    <label for="transaction_type">withdraw or deposit</label>
+        <select name="transaction_type" id="transaction_type">
+            <option value="deposit">deposit</option>
+            <option value="withdraw">withdraw</option>
+        </select><br><br>
+    <label for="reason">why is there a new transaction:</label>
+    <textarea id="reason"></textarea><br><br>
+    <label for="date">date of transaction:</label>
+    <input type="date" id="date" value="2020-08-24"><br><br>
+    <label for="ans">added:</label>
+    <textarea id="ans" disabled></textarea><br><br>
+    <button type="button" id="add" onclick="addition()">add transaction</button>
+    <button onclick="document.getElementById('change_total').value = ''">clear total</button>
+    <button onclick="document.getElementById('reason').value = ''">clear reason</button>
+</body>
+</html>

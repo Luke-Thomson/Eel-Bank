@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eel Bank</title>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+      <script type="text/javascript" src="main.js"></script>
+      <script type="text/javascript" src="/eel.js"></script>
+  </head>
+ <section class="hero is-danger is-medium is-bold">
+  <div class="hero-body">
+    <div class="container is-fluid">
+      <h1 class="title">
+        Eel Banking Services
+      </h1>
+      <h2 class="subtitle">
+        <a onclick="new_function()" id="balance">
+            current balance:
+        </a>
+      </h2>
+    </div>
+  </div>
+</section><br>
+  <body>
+  <div class="container is-fluid">
+    <label class="label">absolute value of the transaction</label>
+    <div class="control is-dark">
+        <input class="input" type="text" placeholder="dollar amount of transaction" id="change_total">
+    </div>
+  </div><br>
+
+  <div class="container is-fluid">
+    <label class="label">why is there a new transaction</label>
+    <div class="field is-dark">
+        <input class="input" type="text" placeholder="reason" id="reason">
+    </div>
+  </div><br>
+
+  <div class="container is-fluid">
+    <label class="label">withdraw or deposit</label>
+    <div class="select is-dark">
+        <select id="transaction_type">
+            <option>deposit</option>
+            <option>withdraw</option>
+        </select>
+    </div>
+  </div><br>
+
+  <div class="container is-fluid">
+  <label class="label" >date of transaction</label>
+  <input type="date" id="date">
+</div><br>
+
+  <fieldset disabled>
+  <div class="container is-fluid">
+    <label class="label">updated table with a new line</label>
+    <div class="control">
+        <textarea class="textarea" placeholder="new line" id="ans"></textarea>
+    </div>
+  </div><br>
+  </fieldset>
+<div class="container is-fluid">
+ <div class="field is-grouped">
+  <p class="control">
+    <a class="button is-danger is-medium is-outlined" id="add" onclick="addition()">
+      add transaction
+    </a>
+  </p>
+
+  <p class="control">
+    <a class="button is-danger is-medium is-outlined" href="javascript:history.go(0)">
+      refresh page
+    </a>
+  </p>
+    <p class="control">
+    <a class="button is-danger is-medium" id="delete_row" onclick="my_func()">
+      delete row
+    </a>
+  </p>
+ </div><br>
+    <iframe id="Iframe" style="border: 0; width:100%; height: 500px; overflow: auto;" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSxN5ThzkPzB5PM8EFOSCfrZYQ2fsBlnH1r1HcAmITJ7VBqjcRcomqN0DjMEsZHSOKM6t_aSRB6DWwv/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false""></iframe>
+</div>
+ </body>
+</html>
